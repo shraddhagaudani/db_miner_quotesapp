@@ -16,7 +16,7 @@ class _Splash_screenState extends State<Splash_screen> {
       () => Get.offNamed('/'),
     );
     return Scaffold(
-      body: Column(
+      body: Column(mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(

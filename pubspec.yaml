@@ -36,9 +36,18 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   get: ^4.6.5
-  shared_preferences:
   sqflite:
   path:
+  get_storage: ^2.1.1
+  share_plus: ^7.0.2
+  google_fonts:
+  screenshot: ^2.1.0
+  http:
+  async_wallpaper:
+  path_provider:
+  image_gallery_saver: 
+
+
 
 dev_dependencies:
   flutter_test:
@@ -70,6 +79,7 @@ flutter:
     - assets/images/
     - assets/json/
     - assets/categoryimage/
+    - assets/Alljsonimage/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
