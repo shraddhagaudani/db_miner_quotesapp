@@ -68,6 +68,8 @@ class _EditPageState extends State<EditPage> {
     Colors.purple.shade300,
     Colors.purpleAccent.shade400,
     Colors.blueGrey.shade300,
+    Colors.amberAccent.shade400,
+    Colors.amber.shade300,
   ];
   List<Color> fontColor = [
     Colors.red,
@@ -79,6 +81,8 @@ class _EditPageState extends State<EditPage> {
     Colors.purple,
     Colors.purpleAccent,
     Colors.blueGrey,
+    Colors.yellow,
+    Colors.yellowAccent,
   ];
 
   List<String?> googleFonts = [
@@ -116,7 +120,7 @@ class _EditPageState extends State<EditPage> {
                       width: Get.width * 1,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          color: selectedBackgroundColor),
+                          color: selectedBackgroundColor,),
                       child: Column(
                         children: [
                           Text(
@@ -139,9 +143,7 @@ class _EditPageState extends State<EditPage> {
                     children: [
                       Text(
                         "Font Size",
-                        style: GoogleFonts.hind(fontWeight: FontWeight.bold),
-                        // style: TextStyle(
-                        //     fontSize: 18, fontWeight: FontWeight.w500),
+                        style: GoogleFonts.hind(fontWeight: FontWeight.bold,),
                       ),
                       const Spacer(),
                       IconButton(
@@ -379,6 +381,7 @@ class _EditPageState extends State<EditPage> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
+
                             GestureDetector(
                               onTap: () {
                                 setState(() {

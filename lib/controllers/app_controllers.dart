@@ -15,7 +15,6 @@ class QuotesController extends GetxController {
 }
 
 class TrueOrFalseValController extends GetxController {
-
   TrueOrFalseAccessModel trueOrFalseAccessModel = TrueOrFalseAccessModel(
     trueorfalsevalforcategory: false,
     truefalsevalfordetailspage: false,
@@ -47,8 +46,6 @@ class EditingController extends GetxController {
   EditingModel editingModel = EditingModel(textsize: 16, letterspacing: 1.0);
 
   increaseTextSize() {
-
-
     if (editingModel.textsize <= 29) {
       editingModel.textsize = editingModel.textsize + 1;
     }
@@ -63,22 +60,31 @@ class EditingController extends GetxController {
     update();
   }
 
-  // letterSpacing() {
-  //   if (editingModel.letterspacing > 0.1) {
-  //    editingModel.letterspacing -= 0.1;
-  //   }
-  //   update();
-  // }
 }
 
-
-class FavriouteController extends GetxController{
-
+class FavriouteController extends GetxController {
   List<DatabaseSecond_Model> favriouteList = [];
 
-  addFavrioute({required DatabaseSecond_Model added})async{
+  addFavrioute({required DatabaseSecond_Model added}) async {
     favriouteList.add(added);
     print(favriouteList[0].quote);
+    update();
+  }
+}
+
+class ThemeController extends GetxController {
+  ThemeModel themeModel = ThemeModel(isdark: false);
+
+  ChangeTheme() {
+    themeModel.isdark = !themeModel.isdark;
+
+    (Get.isDarkMode)
+        ? Get.changeTheme(
+            ThemeData(brightness: Brightness.light, useMaterial3: true),
+          )
+        : Get.changeTheme(
+            ThemeData(brightness: Brightness.dark, useMaterial3: true),
+          );
     update();
   }
 }

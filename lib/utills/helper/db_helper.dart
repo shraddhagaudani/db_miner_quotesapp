@@ -48,18 +48,22 @@ class DBHelper {
 
     String path = join(dbLocation, "quotes.db");
 
-    db = await openDatabase(path, version: 1, onCreate: (Database db, _) async {
-      String firstquery =
-          "CREATE TABLE IF NOT EXISTS quotesFirstTable(id INTEGER,category TEXT)";
+    db = await openDatabase(
+      path,
+      version: 1,
+      onCreate: (Database db, _) async {
+        String firstquery =
+            "CREATE TABLE IF NOT EXISTS quotesFirstTable(id INTEGER,category TEXT)";
 
-      await db.execute(firstquery);
+        await db.execute(firstquery);
 
-      String secondquery =
-          "CREATE TABLE IF NOT EXISTS quotesSecondTable(id INTEGER,quote TEXT,author TEXT)";
+        String secondquery =
+            "CREATE TABLE IF NOT EXISTS quotesSecondTable(id INTEGER,quote TEXT,author TEXT,idd TEXT,favourite TEXT)";
 
-      await db.execute(secondquery);
-      // print(query);
-    });
+        await db.execute(secondquery);
+        // print(query);
+      },
+    );
   }
 
 //first insert
@@ -191,6 +195,18 @@ class DBHelper {
     print(searchQuote);
     print("==================");
     return searchQuote;
+  }
+
+  Future<int> updateSecondQuotes() async {
+    await initDB();
+
+    String query = "UPDATE quotesSecondTable SET id=? WHERE idd=?,favourite=?";
+
+    List args = [];
+
+    int res = await db!.rawUpdate(query, args);
+
+   return res;
   }
 }
 

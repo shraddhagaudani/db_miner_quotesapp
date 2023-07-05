@@ -21,6 +21,7 @@ class _Home_pageState extends State<Home_page> {
   QuotesController quotesController = Get.put(QuotesController());
   NavigationController navigationController = Get.put(NavigationController());
   FavriouteController  favriouteController = Get.put(FavriouteController());
+  ThemeController themeController = Get.put(ThemeController());
 
   // late Future<List<DatabaseFirst_Model>> getAllCategory;
   //
@@ -51,9 +52,10 @@ class _Home_pageState extends State<Home_page> {
           actions: [
             IconButton(
               onPressed: () {
-                Get.isDarkMode
-                    ? Get.changeTheme(ThemeData.light(useMaterial3: true))
-                    : Get.changeTheme(ThemeData.dark(useMaterial3: true));
+                themeController.ChangeTheme();
+                // Get.isDarkMode
+                //     ? Get.changeTheme(ThemeData.light(useMaterial3: true))
+                //     : Get.changeTheme(ThemeData.dark(useMaterial3: true));
               },
               icon: const Icon(Icons.sunny),
             ),

@@ -24,14 +24,19 @@ class ImageModel {
   String user;
   String userImageUrl;
 
-
-  ImageModel({required this.image,required this.user,required this.userImageUrl});
+  ImageModel(
+      {required this.image, required this.user, required this.userImageUrl});
 
   factory ImageModel.fromMap({required Map data}) {
     return ImageModel(
-      image: data['largeImageURL'],
-      user: data['user'],
-      userImageUrl: data['userImageURL']
-    );
+        image: data['largeImageURL'],
+        user: data['user'],
+        userImageUrl: data['userImageURL']);
   }
+}
+
+class ThemeModel {
+  bool isdark;
+
+  ThemeModel({required this.isdark});
 }

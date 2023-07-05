@@ -172,10 +172,10 @@ packages:
     dependency: "direct main"
     description:
       name: image_gallery_saver
-      sha256: "467de169167b5c4e1ddde65395e4653c336a82f760b6700ea295085b7f2dd248"
+      sha256: "0aba74216a4d9b0561510cb968015d56b701ba1bd94aace26aacdd8ae5761816"
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.2"
+    version: "2.0.3"
   js:
     dependency: transitive
     description:
