@@ -8,7 +8,7 @@ class InitialvalModel {
 }
 
 class EditingModel {
-  num textsize;
+  double textsize;
   double letterspacing;
 
   EditingModel({

@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import '../models/quotes_model.dart';
+import 'package:db_miner_quotesapp/utills/helper/db_helper.dart';
 
 class QuotesController extends GetxController {
   InitialvalModel initialvalModel = InitialvalModel(
@@ -14,6 +15,7 @@ class QuotesController extends GetxController {
 }
 
 class TrueOrFalseValController extends GetxController {
+
   TrueOrFalseAccessModel trueOrFalseAccessModel = TrueOrFalseAccessModel(
     trueorfalsevalforcategory: false,
     truefalsevalfordetailspage: false,
@@ -47,24 +49,36 @@ class EditingController extends GetxController {
   increaseTextSize() {
 
 
-    if (editingModel.textsize <= 30) {
-      editingModel.textsize = editingModel.textsize + 1.8;
+    if (editingModel.textsize <= 29) {
+      editingModel.textsize = editingModel.textsize + 1;
     }
     update();
   }
 
   decreaseTextSize() {
-    if (editingModel.textsize >= 12) {
-      editingModel.textsize = editingModel.textsize - 1.8;
+    if (editingModel.textsize >= 11) {
+      editingModel.textsize = editingModel.textsize - 1;
     }
 
     update();
   }
 
-  letterSpacing() {
-    if (editingModel.letterspacing > 0.1) {
-     editingModel.letterspacing -= 0.1;
-    }
+  // letterSpacing() {
+  //   if (editingModel.letterspacing > 0.1) {
+  //    editingModel.letterspacing -= 0.1;
+  //   }
+  //   update();
+  // }
+}
+
+
+class FavriouteController extends GetxController{
+
+  List<DatabaseSecond_Model> favriouteList = [];
+
+  addFavrioute({required DatabaseSecond_Model added})async{
+    favriouteList.add(added);
+    print(favriouteList[0].quote);
     update();
   }
 }

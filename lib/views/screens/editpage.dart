@@ -42,10 +42,7 @@ class _EditPageState extends State<EditPage> {
     }
   }
 
-
   Future<void> setWallpaper({required wallpaperLocation}) async {
-
-
     Uint8List? uint8list = await screenshotController.capture();
 
     if (uint8list != null) {
@@ -58,13 +55,8 @@ class _EditPageState extends State<EditPage> {
       await imageFile.writeAsBytes(uint8list);
 
 // Set the wallpaper from the file
-      await AsyncWallpaper.setWallpaperFromFile(
-        filePath: imagePath,
-        wallpaperLocation: wallpaperLocation,
-      );
     }
   }
-
 
   List<Color> containerColor = [
     Colors.red.shade300,
@@ -130,7 +122,8 @@ class _EditPageState extends State<EditPage> {
                           Text(
                             data!.quote,
                             style: TextStyle(
-                                fontSize: editingController.editingModel.textsize
+                                fontSize: editingController
+                                    .editingModel.textsize
                                     .toDouble(),
                                 color: selectedFontColor,
                                 fontFamily: googleFonts[currentFontIndex]),
@@ -157,9 +150,8 @@ class _EditPageState extends State<EditPage> {
                         },
                         icon: const Icon(CupertinoIcons.plus_app_fill),
                       ),
-                      const Text(
-                        "1.8",
-                        style: TextStyle(fontWeight: FontWeight.w500),
+                       Text("${editingController.editingModel.textsize}",
+                        style: const TextStyle(fontWeight: FontWeight.w500),
                       ),
                       IconButton(
                         onPressed: () {
@@ -178,6 +170,7 @@ class _EditPageState extends State<EditPage> {
                           style: GoogleFonts.hind(fontWeight: FontWeight.bold),
                         ),
                       ),
+
                       Expanded(
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
@@ -217,6 +210,7 @@ class _EditPageState extends State<EditPage> {
                                             ),
                                           ),
                                         ),
+
                                         Expanded(
                                           flex: 5,
                                           child: GridView.builder(
@@ -253,6 +247,7 @@ class _EditPageState extends State<EditPage> {
                                   ),
                                 );
                               },
+
                               child: Container(
                                 height: Get.height * 0.05,
                                 width: Get.width * 0.1,
@@ -265,6 +260,7 @@ class _EditPageState extends State<EditPage> {
                             SizedBox(
                               width: Get.width * 0.01,
                             ),
+
                           ],
                         ),
                       ),
@@ -290,7 +286,7 @@ class _EditPageState extends State<EditPage> {
                                   Container(
                                     height: Get.height * 0.4,
                                     padding: const EdgeInsets.all(16.0),
-                                    decoration: BoxDecoration(),
+
                                     child: Column(
                                       children: [
                                         Expanded(
@@ -420,8 +416,7 @@ class _EditPageState extends State<EditPage> {
                             borderRadius: BorderRadius.circular(5),
                           )),
                           child: Row(
-                            mainAxisAlignment:
-                            MainAxisAlignment.spaceEvenly,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               const Icon(Icons.save),
                               Text(
@@ -437,7 +432,7 @@ class _EditPageState extends State<EditPage> {
                         onTap: () {
                           Clipboard.setData(ClipboardData(text: data.quote))
                               .then(
-                                (value) => Get.snackbar(
+                            (value) => Get.snackbar(
                               "Quote",
                               "Successfully Copy",
                               snackPosition: SnackPosition.BOTTOM,
@@ -458,8 +453,7 @@ class _EditPageState extends State<EditPage> {
                             borderRadius: BorderRadius.circular(5),
                           ),
                           child: Row(
-                            mainAxisAlignment:
-                            MainAxisAlignment.spaceEvenly,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               const Icon(Icons.copy),
                               Text(
@@ -473,8 +467,33 @@ class _EditPageState extends State<EditPage> {
                         ),
                       ),
                       GestureDetector(
-                        onTap: () {
-                          Share.share(data.quote);
+                        onTap: () async {
+                          screenshotController
+                              .capture(delay: Duration(milliseconds: 10))
+                              .then((uint8List) async {
+                            final tempDir = await getTemporaryDirectory();
+
+                            final file = await File("${tempDir.path}/image.png")
+                                .create();
+
+                            file.writeAsBytesSync(uint8List as List<int>);
+
+                            Share.shareFiles(['${file.path}']);
+                          }).catchError((onError) {
+                            print(onError);
+                          });
+                          // Share.share(
+                          //  screenshotController.capture()
+                          //
+                          // // if (uint8list != null) {
+                          // // final directory = (await getTemporaryDirectory()).path;
+                          // //
+                          // // final imagePath = '$directory/screenshot.png';
+                          // //
+                          // // File imageFile = File(imagePath);
+                          // //
+                          // // await imageFile.writeAsBytes(uint8list);
+                          // );
                         },
                         child: Container(
                           height: Get.height * 0.06,
@@ -483,8 +502,7 @@ class _EditPageState extends State<EditPage> {
                             borderRadius: BorderRadius.circular(5),
                           ),
                           child: Row(
-                            mainAxisAlignment:
-                            MainAxisAlignment.spaceEvenly,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               const Icon(
                                 Icons.share,

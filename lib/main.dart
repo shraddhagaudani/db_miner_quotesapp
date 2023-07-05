@@ -28,7 +28,7 @@ void main()async {
         GetPage(name: '/edit_page', page:()=> const EditPage()),
         GetPage(name: '/wallpaper_detailspage', page:()=> const Wallpaper_detailspage()),
 
-        // GetPage(name: '/favourite_page', page: () => const Favrioute_page()),
+        GetPage(name: '/favourite_page', page: () => const Favrioute_page()),
       ],
       debugShowCheckedModeBanner: false,
     ),

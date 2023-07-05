@@ -102,7 +102,7 @@ class QuotesModel {
         category: data["category"],
         quotes: List<Quote>.from(
           data["quotes"].map(
-                (x) => Quote.fromMap(data: x),
+            (x) => Quote.fromMap(data: x),
           ),
         ),
       );
@@ -120,10 +120,10 @@ class Quote {
   });
 
   factory Quote.fromMap({required Map<String, dynamic> data}) => Quote(
-    id: data["id"],
-    quote: data["quote"],
-    author: data["author"],
-  );
+        id: data["id"],
+        quote: data["quote"],
+        author: data["author"],
+      );
 }
 
 class DatabaseFirst_Model {
@@ -148,8 +148,11 @@ class DatabaseSecond_Model {
   String quote;
   String authorName;
 
-  DatabaseSecond_Model(
-      {required this.id, required this.quote, required this.authorName});
+  DatabaseSecond_Model({
+    required this.id,
+    required this.quote,
+    required this.authorName,
+  });
 
   factory DatabaseSecond_Model.fromMap({required Map data}) {
     return DatabaseSecond_Model(
@@ -163,8 +166,6 @@ class DatabaseSecond_Model {
 // To parse this JSON data, do
 //
 //     final quotesModel = quotesModelFromJson(jsonString);
-
-
 
 class TrueOrFalseAccessModel {
   bool trueorfalsevalforcategory;

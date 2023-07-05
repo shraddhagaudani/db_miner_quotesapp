@@ -6,47 +6,56 @@
       {
         "id": 1,
         "quote": "A true friend is someone who is always there for you.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "Friendship is born at that moment when one person says to another, 'What! You too? I thought I was the only one.'",
-        "author": "C.S. Lewis"
+        "author": "C.S. Lewis",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "Friendship is the only cement that will ever hold the world together.",
-        "author": "Woodrow Wilson"
+        "author": "Woodrow Wilson",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "Friendship is the inexpressible comfort of feeling safe with a person, having neither to weigh thoughts nor measure words.",
-        "author": "George Eliot"
+        "author": "George Eliot",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "A real friend is one who walks in when the rest of the world walks out.",
-        "author": "Walter Winchell"
+        "author": "Walter Winchell",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "Friendship is the hardest thing in the world to explain. It's not something you learn in school. But if you haven't learned the meaning of friendship, you really haven't learned anything.",
-        "author": "Muhammad Ali"
+        "author": "Muhammad Ali",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "Friendship is a plant of slow growth and must undergo and withstand the shocks of adversity before it is entitled to the appellation.",
-        "author": "George Washington"
+        "author": "George Washington",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "A true friend is someone who is always there for you, with no judgment and only love.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "Friendship is born when two people discover they have similar interests, thoughts, and values.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 1,
@@ -56,102 +65,122 @@
       {
         "id": 1,
         "quote": "A true friend is someone who is always honest and genuine, even when it's not what you want to hear.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "A friend is one who knows you and loves you just the same.",
-        "author": "Elbert Hubbard"
+        "author": "Elbert Hubbard",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "Friendship is the only flower that blooms in all seasons.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "Friendship is the comfort of knowing that even when you feel alone, you're not.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "A true friend is someone who accepts your past, supports your present, and encourages your future.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "Friendship is not about who you've known the longest, it's about who walked into your life and said, 'I'm here for you.'",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "A true friend is someone who sees the pain in your eyes while everyone else believes the smile on your face.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "Friendship is the only relationship where you don't have to pretend to be someone else.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "A true friend is someone who can make you laugh even when you feel like crying.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "Friendship is the sweetest form of love.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "A friend is someone who knows all about you and still loves you.",
-        "author": "Elbert Hubbard"
+        "author": "Elbert Hubbard",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "Friendship is like a rainbow between two hearts.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "A true friend is someone who understands your past, believes in your future, and accepts you just the way you are.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "Friendship is the key to a happy heart.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "A true friend is someone who lifts you up when others have let you down.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "Friendship is the greatest gift you can give someone.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "A true friend is someone who is always by your side, through the ups and downs.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "Friendship is the bridge that connects hearts all over the world.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "A true friend is someone who knows the song in your heart and can sing it back to you when you have forgotten the words.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 1,
         "quote": "Friendship is the greatest treasure one can have.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       }
     ]
   },
@@ -162,152 +191,197 @@
       {
         "id": 2,
         "quote": "Love is not about how much you say 'I love you,' but how much you can prove that it's true.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "The best thing to hold onto in life is each other.",
-        "author": "Audrey Hepburn"
+        "author": "Audrey Hepburn",
+        "favrioute": false,
+        "favrioute": false,
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is composed of a single soul inhabiting two bodies.",
-        "author": "Aristotle"
+        "author": "Aristotle",
+        "favrioute": false,
+        "favrioute": false,
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Being deeply loved by someone gives you strength while loving someone deeply gives you courage.",
-        "author": "Lao Tzu"
+        "author": "Lao Tzu",
+        "favrioute": false,
+        "favrioute": false,
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is a friendship set to music.",
-        "author": "Joseph Campbell"
+        "author": "Joseph Campbell",
+        "favrioute": false,
+        "favrioute": false,
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is the greatest refreshment in life.",
-        "author": "Pablo Picasso"
+        "author": "Pablo Picasso",
+        "favrioute": false,
+        "favrioute": false,
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "The greatest happiness of life is the conviction that we are loved; loved for ourselves, or rather, loved in spite of ourselves.",
-        "author": "Victor Hugo"
+        "author": "Victor Hugo",
+        "favrioute": false,
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is the only force capable of transforming an enemy into a friend.",
-        "author": "Martin Luther King Jr."
+        "author": "Martin Luther King Jr.",
+        "favrioute": false,
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is the master key that opens the gates of happiness.",
-        "author": "Oliver Wendell Holmes Sr."
+        "author": "Oliver Wendell Holmes Sr.",
+        "favrioute": false,
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is the flower you've got to let grow.",
-        "author": "John Lennon"
+        "author": "John Lennon",
+        "favrioute": false,
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is like the wind, you can't see it but you can feel it.",
-        "author": "Nicholas Sparks"
+        "author": "Nicholas Sparks",
+        "favrioute": false,
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is the greatest gift that one generation can leave to another.",
-        "author": "Richard Garnett"
+        "author": "Richard Garnett",
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is the beauty of the soul.",
-        "author": "Saint Augustine"
+        "author": "Saint Augustine",
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "The more one judges, the less one loves.",
-        "author": "Honore de Balzac"
+        "author": "Honore de Balzac",
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is when the other person's happiness is more important than your own.",
-        "author": "H. Jackson Brown Jr."
+        "author": "H. Jackson Brown Jr.",
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is a game that two can play and both win.",
-        "author": "Eva Gabor"
+        "author": "Eva Gabor",
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is a language spoken by everyone but understood only by the heart.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is the only gold.",
-        "author": "Alfred Lord Tennyson"
+        "author": "Alfred Lord Tennyson",
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is like a virus. It can happen to anybody at any time.",
-        "author": "Maya Angelou"
+        "author": "Maya Angelou",
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is an irresistible desire to be irresistibly desired.",
-        "author": "Robert Frost"
+        "author": "Robert Frost",
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is not only something you feel, it is something you do.",
-        "author": "David Wilkerson"
+        "author": "David Wilkerson",
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is the poetry of the senses.",
-        "author": "Honoré de Balzac"
+        "author": "Honoré de Balzac",
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is the greatest adventure.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is the master key that opens the gates of happiness.",
-        "author": "Oliver Wendell Holmes Sr."
+        "author": "Oliver Wendell Holmes Sr.",
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is a game that two can play and both win.",
-        "author": "Eva Gabor"
+        "author": "Eva Gabor",
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is a canvas furnished by nature and embroidered by imagination.",
-        "author": "Voltaire"
+        "author": "Voltaire",
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is the bridge between two hearts.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is the most powerful force in the world.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is the triumph of imagination over intelligence.",
-        "author": "H. L. Mencken"
+        "author": "H. L. Mencken",
+        "favrioute": false
       },
       {
         "id": 2,
         "quote": "Love is like a butterfly; it goes where it pleases and it pleases wherever it goes.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       }
     ]
   },
@@ -316,99 +390,118 @@
     "category": "motivational",
     "quotes": [
       {
-        "id":3,
+        "id": 3,
         "quote": "Believe you can and you're halfway there.",
-        "author": "Theodore Roosevelt"
+        "author": "Theodore Roosevelt",
+        "favrioute": false
       },
       {
-        "id":3,
+        "id": 3,
         "quote": "The only way to do great work is to love what you do.",
-        "author": "Steve Jobs"
+        "author": "Steve Jobs",
+        "favrioute": false
       },
       {
         "id": 3,
         "quote": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
-        "author": "Winston Churchill"
+        "author": "Winston Churchill",
+        "favrioute": false
       },
       {
-        "id":3,
+        "id": 3,
         "quote": "Don't watch the clock; do what it does. Keep going.",
-        "author": "Sam Levenson"
+        "author": "Sam Levenson",
+        "favrioute": false
       },
       {
-        "id":3,
+        "id": 3,
         "quote": "The future belongs to those who believe in the beauty of their dreams.",
-        "author": "Eleanor Roosevelt"
+        "author": "Eleanor Roosevelt",
+        "favrioute": false
       },
       {
         "id": 3,
         "quote": "Your time is limited, don't waste it living someone else's life.",
-        "author": "Steve Jobs"
+        "author": "Steve Jobs",
+        "favrioute": false
       },
       {
         "id": 3,
         "quote": "Success is not the key to happiness. Happiness is the key to success.",
-        "author": "Albert Schweitzer"
+        "author": "Albert Schweitzer",
+        "favrioute": false
       },
       {
         "id": 3,
         "quote": "The harder you work for something, the greater you'll feel when you achieve it.",
-        "author": "Unknown"
+        "author": "Unknown",
+        "favrioute": false
       },
       {
         "id": 3,
         "quote": "You miss 100% of the shots you don't take.",
-        "author": "Wayne Gretzky"
+        "author": "Wayne Gretzky",
+        "favrioute": false
       },
       {
         "id": 3,
         "quote": "The secret of getting ahead is getting started.",
-        "author": "Mark Twain"
+        "author": "Mark Twain",
+        "favrioute": false
       },
       {
         "id": 3,
         "quote": "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.",
-        "author": "Christian D. Larson"
+        "author": "Christian D. Larson",
+        "favrioute": false
       },
       {
         "id": 3,
         "quote": "You are never too old to set another goal or to dream a new dream.",
-        "author": "C.S. Lewis"
+        "author": "C.S. Lewis",
+        "favrioute": false
       },
       {
         "id": 3,
         "quote": "The only limit to our realization of tomorrow will be our doubts of today.",
-        "author": "Franklin D. Roosevelt"
+        "author": "Franklin D. Roosevelt",
+        "favrioute": false
       },
       {
         "id": 3,
         "quote": "Hardships often prepare ordinary people for an extraordinary destiny.",
-        "author": "C.S. Lewis"
+        "author": "C.S. Lewis",
+        "favrioute": false
       },
       {
         "id": 3,
         "quote": "Don't be pushed around by the fears in your mind. Be led by the dreams in your heart.",
-        "author": "Roy T. Bennett"
+        "author": "Roy T. Bennett",
+        "favrioute": false
       },
       {
         "id": 3,
         "quote": "It always seems impossible until it's done.",
-        "author": "Nelson Mandela"
+        "author": "Nelson Mandela",
+        "favrioute": false
       },
       {
         "id": 3,
         "quote": "Believe in yourself, take on your challenges, dig deep within yourself to conquer fears. Never let anyone bring you down. You got this.",
-        "author": "Chantal Sutherland"
+        "author": "Chantal Sutherland",
+        "favrioute": false
       },
       {
         "id": 3,
         "quote": "The only person you are destined to become is the person you decide to be.",
-        "author": "Ralph Waldo Emerson"
+        "author": "Ralph Waldo Emerson",
+        "favrioute": false
       },
       {
         "id": 3,
         "quote": "Great things never come from comfort zones.",
-        "author": "Roy T. Bennett"
+        "author": "Roy T. Bennett",
+        "favrioute": false
       },
       {
         "id": 3,
@@ -472,17 +565,17 @@
     "category": "success",
     "quotes": [
       {
-        "id":4,
+        "id": 4,
         "quote": "Success is not the key to happiness. Happiness is the key to success.",
         "author": "Albert Schweitzer"
       },
       {
-        "id":4,
+        "id": 4,
         "quote": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
         "author": "Winston Churchill"
       },
       {
-        "id":4,
+        "id": 4,
         "quote": "The only way to do great work is to love what you do.",
         "author": "Steve Jobs"
       },
@@ -492,7 +585,7 @@
         "author": "Bo Bennett"
       },
       {
-        "id":4,
+        "id": 4,
         "quote": "Success is walking from failure to failure with no loss of enthusiasm.",
         "author": "Winston Churchill"
       },

@@ -20,7 +20,7 @@ class _Wallpaper_detailspageState extends State<Wallpaper_detailspage> {
         children: [
           Container(
             alignment: Alignment.center,
-            height: Get.height * 0.8,
+            height: Get.height * 0.746,
             width: Get.width * 1,
             decoration: BoxDecoration(
               image: DecorationImage(
@@ -29,98 +29,110 @@ class _Wallpaper_detailspageState extends State<Wallpaper_detailspage> {
               ),
             ),
           ),
-          const SizedBox(
-            height: 5,
-          ),
-          ListTile(
-            leading: CircleAvatar(
-              radius: 30,
-              foregroundImage: NetworkImage(imageModel.userImageUrl),
-            ),
-            title: Text(imageModel.user),
-          ),
-          const SizedBox(
-            height: 5,
-          ),
-          const Row(
-            children: [
-              Text(
-                "Set Wallpaper :",
-                style: TextStyle(fontWeight: FontWeight.w500),
-              ),
-            ],
-          ),
-          const SizedBox(
-            height: 4,
-          ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
+          // const SizedBox(
+          //   height: 5,
+          // ),
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Column(
               children: [
-                OutlinedButton(
-                  onPressed: () async {
-                    try {
-                      await AsyncWallpaper.setWallpaper(
-                        url: imageModel.image,
-                        goToHome: true,
-                        wallpaperLocation: AsyncWallpaper.HOME_SCREEN,
-                        toastDetails: ToastDetails.success(),
-                        errorToastDetails: ToastDetails.error(),
-                      );
-                    } on PlatformException catch (e) {
-                      Get.snackbar("$e", "Not successfully set..",
-                          backgroundColor: Colors.red,
-                          snackPosition: SnackPosition.BOTTOM);
-                    }
-                  },
-                  child: const Text("Home screen"),
+                ListTile(
+                  leading: CircleAvatar(
+                    radius: 30,
+                    foregroundImage: NetworkImage(imageModel.userImageUrl),
+                  ),
+                  title: Text(
+                    imageModel.user,
+                    style: const TextStyle(
+                        fontSize: 20, fontWeight: FontWeight.w500),
+                  ),
                 ),
                 const SizedBox(
-                  width: 4,
+                  height: 5,
                 ),
-                OutlinedButton(
-                  onPressed: () async {
-                    try {
-                      await AsyncWallpaper.setWallpaper(
-                        url: imageModel.image,
-                        goToHome: true,
-                        wallpaperLocation: AsyncWallpaper.LOCK_SCREEN,
-                        toastDetails: ToastDetails.success(),
-                        errorToastDetails: ToastDetails.error(),
-                      );
-                    } on PlatformException catch (e) {
-                      Get.snackbar("$e", "Not successfully set..",
-                          backgroundColor: Colors.red,
-                          snackPosition: SnackPosition.BOTTOM);
-                    }
-                  },
-                  child: const Text("Lock Screen"),
+                const Row(
+                  children: [
+                    Text(
+                      "Set Wallpaper :",
+                      style:
+                          TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
+                    ),
+                  ],
                 ),
                 const SizedBox(
-                  width: 5,
+                  height: 5,
                 ),
-                OutlinedButton(
-                  onPressed: () async {
-                    try {
-                      await AsyncWallpaper.setWallpaper(
-                        url: imageModel.image,
-                        goToHome: true,
-                        wallpaperLocation: AsyncWallpaper.BOTH_SCREENS,
-                        toastDetails: ToastDetails.success(),
-                        errorToastDetails: ToastDetails.error(),
-                      );
-                    } on PlatformException catch (e) {
-                      Get.snackbar("$e", "Not successfully set..",
-                          backgroundColor: Colors.red,
-                          snackPosition: SnackPosition.BOTTOM);
-                    }
-                  },
-                  child: const Text("Both screen"),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      OutlinedButton(
+                        onPressed: () async {
+                          try {
+                            await AsyncWallpaper.setWallpaper(
+                              url: imageModel.image,
+                              goToHome: true,
+                              wallpaperLocation: AsyncWallpaper.HOME_SCREEN,
+                              toastDetails: ToastDetails.success(),
+                              errorToastDetails: ToastDetails.error(),
+                            );
+                          } on PlatformException catch (e) {
+                            Get.snackbar("$e", "Not successfully set..",
+                                backgroundColor: Colors.red,
+                                snackPosition: SnackPosition.BOTTOM);
+                          }
+                        },
+                        child: const Text("Home screen"),
+                      ),
+                      const SizedBox(
+                        width: 4,
+                      ),
+                      OutlinedButton(
+                        onPressed: () async {
+                          try {
+                            await AsyncWallpaper.setWallpaper(
+                              url: imageModel.image,
+                              goToHome: true,
+                              wallpaperLocation: AsyncWallpaper.LOCK_SCREEN,
+                              toastDetails: ToastDetails.success(),
+                              errorToastDetails: ToastDetails.error(),
+                            );
+                          } on PlatformException catch (e) {
+                            Get.snackbar("$e", "Not successfully set..",
+                                backgroundColor: Colors.red,
+                                snackPosition: SnackPosition.BOTTOM);
+                          }
+                        },
+                        child: const Text("Lock Screen"),
+                      ),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      OutlinedButton(
+                        onPressed: () async {
+                          try {
+                            await AsyncWallpaper.setWallpaper(
+                              url: imageModel.image,
+                              goToHome: true,
+                              wallpaperLocation: AsyncWallpaper.BOTH_SCREENS,
+                              toastDetails: ToastDetails.success(),
+                              errorToastDetails: ToastDetails.error(),
+                            );
+                          } on PlatformException catch (e) {
+                            Get.snackbar("$e", "Not successfully set..",
+                                backgroundColor: Colors.red,
+                                snackPosition: SnackPosition.BOTTOM);
+                          }
+                        },
+                        child: const Text("Both screen"),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
-          ),
+          )
         ],
       ),
     );
