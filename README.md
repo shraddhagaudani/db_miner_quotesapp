@@ -68,6 +68,12 @@ even set it as their device wallpaper.
 
 project output:
 
+  <img align "left" src="https://github.com/shraddhagaudani/db_miner_quotesapp/assets/122030732/d4299aa2-2d85-4496-9b5b-95ce4143ab6a" width="220px">
+  <img align "left" src ="https://github.com/shraddhagaudani/db_miner_quotesapp/assets/122030732/bfd02daa-f35f-40ef-8402-ff8843af3903" width="220px">
+  <img align "left" src ="https://github.com/shraddhagaudani/db_miner_quotesapp/assets/122030732/0db4a2bb-83f3-4239-b385-9df1940142cc" width="220px">
+
+
+
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
