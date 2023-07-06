@@ -58,10 +58,15 @@ class DBHelper {
         await db.execute(firstquery);
 
         String secondquery =
-            "CREATE TABLE IF NOT EXISTS quotesSecondTable(id INTEGER,quote TEXT,author TEXT,idd TEXT,favourite TEXT)";
+            "CREATE TABLE IF NOT EXISTS quotesSecondTable(id INTEGER,quote TEXT,author TEXT,idd INTEGER,favourite TEXT)";
 
         await db.execute(secondquery);
+
         // print(query);
+        String favrioutequery =
+            "CREATE TABLE IF NOT EXISTS quoteFavouriteTable(id INTEGER,quote TEXT,author TEXT,idd INTEGER,favourite TEXT)";
+
+        await db.execute(favrioutequery);
       },
     );
   }
@@ -96,18 +101,40 @@ class DBHelper {
     for (int i = 0; i < data.length; i++) {
       for (int j = 0; j < data[i].quotes.length; j++) {
         String query =
-            "INSERT INTO quotesSecondTable(id,quote,author) VALUES(?,?,?)";
+            "INSERT INTO quotesSecondTable(id,quote,author,favourite,idd) VALUES(?,?,?,?,?)";
 
         List args = [
           data[i].quotes[j].id,
           data[i].quotes[j].quote,
           data[i].quotes[j].author,
+          data[i].quotes[j].favourite,
+          data[i].quotes[j].idd,
         ];
         int res = await db!.rawInsert(query, args);
-        // print("======");
-        // print(res);
-        // print("======");
+        print("======");
+        print(res);
+        print("======");
       }
+    }
+  }
+
+  //insert favrioutetable
+  insertQuoteFavrioteTable({ DatabaseSecond_Model? data}) async {
+    await initDB();
+
+    if (data != null) {
+      String query =
+          "INSERT INTO quoteFavouriteTable(id,quote,author,idd,favourite) VALUES(?,?,?,?,?)";
+
+      List args = [
+        data.id,
+        data.quote,
+        data.authorName,
+        data.idd,
+        data.favourite
+      ];
+
+      int res = await db!.rawInsert(query, args);
     }
   }
 
@@ -154,11 +181,11 @@ class DBHelper {
         TrueOrFalseValController();
     if (checkValue.read("truefalsevalfordetailspage") != true) {
       await insertQuoteSecondMap();
-      print("One Time Run....");
-      print(checkValue.read("truefalsevalfordetailspage"));
+      // print("One Time Run....");
+      // print(checkValue.read("truefalsevalfordetailspage"));
     } else {
-      print("No Repete...");
-      print(checkValue.read("truefalsevalfordetailspage"));
+      // print("No Repete...");
+      // print(checkValue.read("truefalsevalfordetailspage"));
     }
 
     trueOrFalseValController.Truefalsevaluefordetailspage();
@@ -197,17 +224,50 @@ class DBHelper {
     return searchQuote;
   }
 
-  Future<int> updateSecondQuotes() async {
+//fetchfaveriouequotes:
+  Future<List<DatabaseSecond_Model>> fetchFavriouteQuotes() async {
+    await initDB();
+    await insertQuoteFavrioteTable();
+    String query = "SELECT *FROM quoteFavouriteTable ";
+
+    List<Map<String, dynamic>> res = await db!.rawQuery(query);
+    print("++++++");
+    print(res);
+    print("++++++");
+    List<DatabaseSecond_Model> favrioutequote =
+        res.map((e) => DatabaseSecond_Model.fromMap(data: e)).toList();
+    print("========");
+    print(favrioutequote);
+    print("========");
+    return favrioutequote;
+  }
+
+//updatefavriourtable
+  UpdateForFavriouteTable(
+      {required String val, required int id, required idd}) async {
     await initDB();
 
-    String query = "UPDATE quotesSecondTable SET id=? WHERE idd=?,favourite=?";
+    String query =
+        "UPDATE quotesSecondTable SET favourite=? WHERE id=? AND idd=?;";
 
-    List args = [];
+    List args = [val, id, idd];
 
     int res = await db!.rawUpdate(query, args);
 
-   return res;
+    print(res);
   }
+//
+// Future<int> updateSecondQuotes() async {
+//   await initDB();
+//
+//   String query = "UPDATE quotesSecondTable SET id=? WHERE idd=?,favourite=?";
+//
+//   List args = [];
+//
+//   int res = await db!.rawUpdate(query, args);
+//
+//  return res;
+// }
 }
 
 class WPHelper {

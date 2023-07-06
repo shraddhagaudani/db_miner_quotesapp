@@ -20,7 +20,7 @@ class Home_page extends StatefulWidget {
 class _Home_pageState extends State<Home_page> {
   QuotesController quotesController = Get.put(QuotesController());
   NavigationController navigationController = Get.put(NavigationController());
-  FavriouteController  favriouteController = Get.put(FavriouteController());
+  // FavriouteController  favriouteController = Get.put(FavriouteController());
   ThemeController themeController = Get.put(ThemeController());
 
   // late Future<List<DatabaseFirst_Model>> getAllCategory;
@@ -50,6 +50,9 @@ class _Home_pageState extends State<Home_page> {
           title: const Text("Quote App"),
           elevation: 0,
           actions: [
+            IconButton(onPressed: (){
+              Get.offNamed('/favourite_page');
+            }, icon: Icon(CupertinoIcons.heart),),
             IconButton(
               onPressed: () {
                 themeController.ChangeTheme();

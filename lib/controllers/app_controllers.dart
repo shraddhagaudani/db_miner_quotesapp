@@ -67,7 +67,7 @@ class FavriouteController extends GetxController {
 
   addFavrioute({required DatabaseSecond_Model added}) async {
     favriouteList.add(added);
-    print(favriouteList[0].quote);
+
     update();
   }
 }
