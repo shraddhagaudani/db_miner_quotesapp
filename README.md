@@ -88,6 +88,18 @@ project output:
   <img align="left" src ="https://github.com/shraddhagaudani/db_miner_quotesapp/assets/122030732/38b2790f-50a6-4edd-a006-00e8bbc9107e" width="220px">
   <img align="left" src ="https://github.com/shraddhagaudani/db_miner_quotesapp/assets/122030732/1b765968-85c0-4391-acbb-29cf6131cf40" width="220px">
 
+  <img align="left" src ="https://github.com/shraddhagaudani/db_miner_quotesapp/assets/122030732/5414f055-e467-47ce-b81f-6cf65052fc7d" width="220px">
+  <img align="left" src ="https://github.com/shraddhagaudani/db_miner_quotesapp/assets/122030732/5b4d455c-8c72-4b3c-9192-18e344ac7e1a" width="220px">
+  <img align="left" src ="https://github.com/shraddhagaudani/db_miner_quotesapp/assets/122030732/abea2062-98b0-4011-b197-d9ed2e6f534b" width="220px">
+
+  <img align="left" src ="https://github.com/shraddhagaudani/db_miner_quotesapp/assets/122030732/0151e5f7-4541-4403-959f-e34a8cebfe01" width="220px">
+   
+
+
+
+
+
+
 
   
 
