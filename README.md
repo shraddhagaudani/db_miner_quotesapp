@@ -31,8 +31,6 @@ API Calling: The app leverages API calls to fetch additional quotes, expanding t
 beyond what is available in the Local JSON Bank. This ensures a diverse and ever-growing
 collection of inspirational quotes for users to explore.
 
-“Quality is our Motto.” Page 1 of 4 Shaping “skills” for “scaling” higher…!!!
-
 Local JSON Bank: In addition to API calling, the app utilizes a Local JSON Bank to provide a
 base collection of quotes. This ensures that users have access to quotes even when offline or in
 situations where API access is limited.
