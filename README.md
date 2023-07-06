@@ -93,6 +93,8 @@ project output:
   <img align="left" src ="https://github.com/shraddhagaudani/db_miner_quotesapp/assets/122030732/abea2062-98b0-4011-b197-d9ed2e6f534b" width="220px">
 
   <img align="left" src ="https://github.com/shraddhagaudani/db_miner_quotesapp/assets/122030732/0151e5f7-4541-4403-959f-e34a8cebfe01" width="220px">
+  
+
    
 
 
