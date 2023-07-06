@@ -1,6 +1,12 @@
 # db_miner_quotesapp
 
 A new Flutter project.
+
+## Getting Started
+
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
 Project Definition: Quotes (DB Miner)
 
 Project Description:
@@ -60,12 +66,7 @@ information and options for customization. Users can explore the quote's content
 background image, choose a random font family, copy and share the quote as a wallpaper, or
 even set it as their device wallpaper.
 
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
+project output:
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
