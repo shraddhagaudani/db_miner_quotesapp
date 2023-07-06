@@ -93,6 +93,17 @@ project output:
   <img align="left" src ="https://github.com/shraddhagaudani/db_miner_quotesapp/assets/122030732/abea2062-98b0-4011-b197-d9ed2e6f534b" width="220px">
 
   <img align="left" src ="https://github.com/shraddhagaudani/db_miner_quotesapp/assets/122030732/0151e5f7-4541-4403-959f-e34a8cebfe01" width="220px">
+  <img align="left" src ="https://github.com/shraddhagaudani/db_miner_quotesapp/assets/122030732/0c001b87-7479-449a-85ea-9ac910179307" width="220px">
+  <img align="left" src ="https://github.com/shraddhagaudani/db_miner_quotesapp/assets/122030732/694c95ff-2924-4c8e-9f03-780bc39caefa" width="220px">
+
+  <img align="left" src ="https://github.com/shraddhagaudani/db_miner_quotesapp/assets/122030732/88a3e4d9-62de-4f49-b6ed-f24c762eba55" width="220px">
+  <img align="left" src ="https://github.com/shraddhagaudani/db_miner_quotesapp/assets/122030732/f485b50c-934b-4dbf-a2c9-a8e28bdac685" width="220px">
+  <img align="left" src =https://github.com/shraddhagaudani/db_miner_quotesapp/assets/122030732/9a4f52f2-60bf-4227-b2d5-a5c18bec33eb" width="220px">
+
+
+
+
+
   
 
    
