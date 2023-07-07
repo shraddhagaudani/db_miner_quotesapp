@@ -1,5 +1,5 @@
 
-https://github.com/shraddhagaudani/db_miner_quotesapp/assets/122030732/e39272f4-0a21-4ca8-83e6-a6b4ba4c6d81
+
 # db_miner_quotesapp
 
 A new Flutter project.
@@ -116,7 +116,7 @@ project output:
 
 
 
-  
+  https://github.com/shraddhagaudani/db_miner_quotesapp/assets/122030732/e39272f4-0a21-4ca8-83e6-a6b4ba4c6d81
 
   
 
