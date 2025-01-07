@@ -20,6 +20,7 @@ class Home_page extends StatefulWidget {
 class _Home_pageState extends State<Home_page> {
   QuotesController quotesController = Get.put(QuotesController());
   NavigationController navigationController = Get.put(NavigationController());
+
   // FavriouteController  favriouteController = Get.put(FavriouteController());
   ThemeController themeController = Get.put(ThemeController());
 
@@ -44,105 +45,109 @@ class _Home_pageState extends State<Home_page> {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<NavigationController>(builder: (_) {
-      return Scaffold(
-        appBar: AppBar(
-          title: const Text("Quote App"),
-          elevation: 0,
-          actions: [
-            IconButton(onPressed: (){
-              Get.offNamed('/favourite_page');
-            }, icon: Icon(CupertinoIcons.heart),),
-            IconButton(
-              onPressed: () {
-                themeController.ChangeTheme();
-                // Get.isDarkMode
-                //     ? Get.changeTheme(ThemeData.light(useMaterial3: true))
-                //     : Get.changeTheme(ThemeData.dark(useMaterial3: true));
-              },
-              icon: const Icon(Icons.sunny),
-            ),
-            GetBuilder<QuotesController>(
-              builder: (_) {
-                return PopupMenuButton(
-                  initialValue: quotesController.initialvalModel.initialval,
-                  onSelected: (val) {
-                    quotesController.initialvalModel.initialval =
-                        val.toString();
-                  },
-                  itemBuilder: (context) {
-                    return [
-                      PopupMenuItem(
-                        child: Row(
-                          children: [
-                            IconButton(
-                              onPressed: () {
-                                Get.back();
+    return GetBuilder<NavigationController>(
+      builder: (_) {
+        return Scaffold(
+          resizeToAvoidBottomInset: false,
+          appBar: AppBar(
+            title: const Text("Quote App"),
+            elevation: 0,
+            actions: [
+              IconButton(
+                onPressed: () {
+                  Get.offNamed('/favourite_page');
+                },
+                icon: const Icon(CupertinoIcons.heart),
+              ),
+              IconButton(
+                onPressed: () {
+                  themeController.ChangeTheme();
+                  // Get.isDarkMode
+                  //     ? Get.changeTheme(ThemeData.light(useMaterial3: true))
+                  //     : Get.changeTheme(ThemeData.dark(useMaterial3: true));
+                },
+                icon: const Icon(Icons.sunny),
+              ),
+              GetBuilder<QuotesController>(
+                builder: (_) {
+                  return PopupMenuButton(
+                    initialValue: quotesController.initialvalModel.initialval,
+                    onSelected: (val) {
+                      quotesController.initialvalModel.initialval =
+                          val.toString();
+                    },
+                    itemBuilder: (context) {
+                      return [
+                        PopupMenuItem(
+                          child: Row(
+                            children: [
+                              IconButton(
+                                onPressed: () {
+                                  Get.back();
 
-                                Get.toNamed('/favourite_page');
-                              },
-                              icon: const Icon(CupertinoIcons.heart),
-                            ),
-                            const Text("Favourite"),
-                          ],
+                                  Get.toNamed('/favourite_page');
+                                },
+                                icon: const Icon(CupertinoIcons.heart),
+                              ),
+                              const Text("Favourite"),
+                            ],
+                          ),
                         ),
-                      ),
-                    ];
-                  },
-                );
-              },
-            ),
-          ],
-        ),
-        body: PageView(
-          controller: navigationController.pageController,
-          scrollDirection: Axis.horizontal,
-          pageSnapping: true,
-          onPageChanged: (val) {
-            setState(
-              () {
-                navigationController.initialval = val;
-              },
-            );
-          },
-          children: const [
-            Quotecategory_component(),
-            // Quotedetail_components(),
-            // Edit_components(),
-            Wallpaper_component(),
-            // Favrioute_components(),
-            // Setting_components(),
-
-          ],
-        ),
-        bottomNavigationBar: NavigationBar(
-          selectedIndex: navigationController.initialval,
-          onDestinationSelected: (val) {
-            setState(
-              () {
-                navigationController.initialval = val;
-                navigationController.pageController.animateToPage(
-
-                  navigationController.initialval,
-                  duration: const Duration(milliseconds: 800),
-                  curve: Curves.easeInOut,
-                );
-              },
-            );
-          },
-          destinations: const [
-            NavigationDestination(
-                icon: Icon(CupertinoIcons.home), label: "Home"),
-            // NavigationDestination(icon: Icon(Icons.edit), label: "edit"),
-            NavigationDestination(icon: Icon(CupertinoIcons.photo), label: "Set Wallpaper"),
-            // NavigationDestination(
-            //     icon: Icon(CupertinoIcons.heart), label: "Favourite"),
-            // NavigationDestination(
-            //     icon: Icon(CupertinoIcons.settings), label: "Setting"),
-          ],
-        ),
-      );
-    },);
-
+                      ];
+                    },
+                  );
+                },
+              ),
+            ],
+          ),
+          body: PageView(
+            controller: navigationController.pageController,
+            scrollDirection: Axis.horizontal,
+            pageSnapping: true,
+            onPageChanged: (val) {
+              setState(
+                () {
+                  navigationController.initialval = val;
+                },
+              );
+            },
+            children: const [
+              Quotecategory_component(),
+              // Quotedetail_components(),
+              // Edit_components(),
+              Wallpaper_component(),
+              // Favrioute_components(),
+              // Setting_components(),
+            ],
+          ),
+          bottomNavigationBar: NavigationBar(
+            selectedIndex: navigationController.initialval,
+            onDestinationSelected: (val) {
+              setState(
+                () {
+                  navigationController.initialval = val;
+                  navigationController.pageController.animateToPage(
+                    navigationController.initialval,
+                    duration: const Duration(milliseconds: 800),
+                    curve: Curves.easeInOut,
+                  );
+                },
+              );
+            },
+            destinations: const [
+              NavigationDestination(
+                  icon: Icon(CupertinoIcons.home), label: "Home"),
+              // NavigationDestination(icon: Icon(Icons.edit), label: "edit"),
+              NavigationDestination(
+                  icon: Icon(CupertinoIcons.photo), label: "Set Wallpaper"),
+              // NavigationDestination(
+              //     icon: Icon(CupertinoIcons.heart), label: "Favourite"),
+              // NavigationDestination(
+              //     icon: Icon(CupertinoIcons.settings), label: "Setting"),
+            ],
+          ),
+        );
+      },
+    );
   }
 }

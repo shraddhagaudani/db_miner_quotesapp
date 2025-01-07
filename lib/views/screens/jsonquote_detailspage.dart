@@ -87,16 +87,17 @@ class _JsonQuote_detailpageState extends State<JsonQuote_detailpage> {
                         borderRadius: BorderRadius.circular(20),
                         // color: Colors.primaries[i % 18].shade300,
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(16),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const SizedBox(
-                              height: 15,
-                            ),
-                            Text(
+                      child: Column(
+
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const SizedBox(
+                            height: 15,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(16),
+                            child: Text(
                               data[i].quote,
                               style: const TextStyle(
                                 fontWeight: FontWeight.w500,
@@ -104,8 +105,11 @@ class _JsonQuote_detailpageState extends State<JsonQuote_detailpage> {
                                 fontSize: 20,
                               ),
                             ),
-                            const Spacer(),
-                            Row(
+                          ),
+                          const Spacer(),
+                          Padding(
+                            padding: const EdgeInsets.all(16),
+                            child: Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
                                 Text(
@@ -117,132 +121,242 @@ class _JsonQuote_detailpageState extends State<JsonQuote_detailpage> {
                                 ),
                               ],
                             ),
-                            const Spacer(),
-                            Container(
-                              padding: const EdgeInsets.all(3),
-                              height: 60,
-                              width: double.infinity,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(
-                                  20,
-                                ),
-                                color: Colors.white.withOpacity(
-                                  0.1,
-                                ),
-                              ),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  IconButton(
-                                    onPressed: () async {
-                                      if (data[i].favourite == "false") {
-                                        print("val = ${data[i].favourite}");
-                                        print(data[i].id);
-                                        print(data[i].idd);
+                          ),
+                          const Spacer(),
+                      Row(
+                        // mainAxisSize: MainAxisSize.min,
+                        children: [
+                          IconButton(
+                            onPressed: () async {
+                              if (data[i].favourite == "false") {
+                                print("val = ${data[i].favourite}");
+                                print(data[i].id);
+                                print(data[i].idd);
 
-                                        await DBHelper.dbHelper
-                                            .UpdateForFavriouteTable(
-                                                val: "true",
-                                                id: data[i].id,
-                                                idd: data[i].idd);
+                                await DBHelper.dbHelper
+                                    .UpdateForFavriouteTable(
+                                    val: "true",
+                                    id: data[i].id,
+                                    idd: data[i].idd);
 
-                                        getAllQuotes = DBHelper.dbHelper
-                                            .fetchAllSecondQuotes(
-                                                id: data[i].id);
-                                        await DBHelper.dbHelper
-                                            .insertQuoteFavrioteTable(
-                                                data: data[i]);
-                                        setState(() {});
-                                      } else {
-                                        DBHelper.dbHelper
-                                            .UpdateForFavriouteTable(
-                                                val: "false",
-                                                id: data[i].id,
-                                                idd: data[i].idd);
+                                getAllQuotes = DBHelper.dbHelper
+                                    .fetchAllSecondQuotes(
+                                    id: data[i].id);
+                                await DBHelper.dbHelper
+                                    .insertQuoteFavrioteTable(
+                                    data: data[i]);
+                                setState(() {});
+                              } else {
+                                DBHelper.dbHelper
+                                    .UpdateForFavriouteTable(
+                                    val: "false",
+                                    id: data[i].id,
+                                    idd: data[i].idd);
 
-                                        getAllQuotes = DBHelper.dbHelper
-                                            .fetchAllSecondQuotes(
-                                                id: data[i].id);
-                                        setState(() {});
-                                      }
-                                      //
-                                      Get.toNamed('/favourite_page',
-                                          arguments: data[i]);
+                                getAllQuotes = DBHelper.dbHelper
+                                    .fetchAllSecondQuotes(
+                                    id: data[i].id);
+                                setState(() {});
+                              }
+                              //
+                              Get.toNamed('/favourite_page',
+                                  arguments: data[i]);
 
-                                      favriouteController.addFavrioute(
-                                          added: data[i]);
+                              favriouteController.addFavrioute(
+                                  added: data[i]);
 //
-                                    },
-                                    icon: Icon(
-                                      CupertinoIcons.heart_fill,
-                                      color: (data[i].favourite == "false")
-                                          ? Colors.white
-                                          : Colors.red,
-                                    ),
-                                  ),
-                                  const Text(
-                                    "Like",
-                                    style: TextStyle(
-                                      color: CupertinoColors.white,
-                                    ),
-                                  ),
-                                  IconButton(
-                                    onPressed: () {
-                                      Get.toNamed('/edit_page',
-                                          arguments: data[i]);
-                                    },
-                                    icon: const Icon(
-                                      Icons.edit,
-                                      color: CupertinoColors.white,
-                                    ),
-                                  ),
-                                  const Text(
-                                    "Edit",
-                                    style: TextStyle(
-                                      color: CupertinoColors.white,
-                                    ),
-                                  ),
-                                  IconButton(
-                                    onPressed: () {
-                                      Clipboard.setData(
-                                        ClipboardData(text: data[i].quote),
-                                      ).then(
-                                        (value) => Get.snackbar(
-                                          "COPY QUOTE",
-                                          "Successfully Copy",
-                                        ),
-                                      );
-                                    },
-                                    icon: const Icon(
-                                      CupertinoIcons.doc_on_clipboard,
-                                      color: CupertinoColors.white,
-                                    ),
-                                  ),
-                                  const Text(
-                                    "Copy",
-                                    style:
-                                        TextStyle(color: CupertinoColors.white),
-                                  ),
-                                  IconButton(
-                                    onPressed: () async {
-                                      await Share.share(data[i].quote);
-                                    },
-                                    icon: const Icon(
-                                      CupertinoIcons.share,
-                                      color: CupertinoColors.white,
-                                    ),
-                                  ),
-                                  const Text(
-                                    "Share",
-                                    style: TextStyle(
-                                      color: CupertinoColors.white,
-                                    ),
-                                  ),
-                                ],
-                              ),
+                            },
+                            icon: Icon(
+                              CupertinoIcons.heart_fill,
+                              color: (data[i].favourite == "false")
+                                  ? Colors.white
+                                  : Colors.red,
                             ),
-                          ],
-                        ),
+                          ),
+                          const Text(
+                            "Like",
+                            style: TextStyle(
+                              color: CupertinoColors.white,fontSize: 11
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () {
+                              Get.toNamed('/edit_page',
+                                  arguments: data[i]);
+                            },
+                            icon: const Icon(
+                              Icons.edit,
+                              color: CupertinoColors.white,
+                            ),
+                          ),
+                          const Text(
+                            "Edit",
+                            style: TextStyle(
+                              color: CupertinoColors.white,fontSize: 11
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () {
+                              Clipboard.setData(
+                                ClipboardData(text: data[i].quote),
+                              ).then(
+                                    (value) => Get.snackbar(
+                                  "COPY QUOTE",
+                                  "Successfully Copy",
+                                ),
+                              );
+                            },
+                            icon: const Icon(
+                              CupertinoIcons.doc_on_clipboard,
+                              color: CupertinoColors.white,
+                            ),
+                          ),
+                          const Text(
+                            "Copy",
+                            style:
+                            TextStyle(color: CupertinoColors.white,fontSize: 11),
+                          ),
+                          IconButton(
+                            onPressed: () async {
+                              await Share.share(data[i].quote);
+                            },
+                            icon: const Icon(
+                              CupertinoIcons.share,
+                              color: CupertinoColors.white,
+                            ),
+                          ),
+                          const Text(
+                            "Share",
+                            style: TextStyle(
+                              color: CupertinoColors.white,fontSize: 11
+                            ),
+                          ),
+                        ],
+                      ),
+                          // Container(
+                          //   padding: const EdgeInsets.all(3),
+                          //   height: 60,
+                          //   width: double.infinity,
+                          //   decoration: BoxDecoration(
+                          //     borderRadius: BorderRadius.circular(
+                          //       20,
+                          //     ),
+                          //     color: Colors.white.withOpacity(
+                          //       0.1,
+                          //     ),
+                          //   ),
+//                               child: Row(
+//                                 mainAxisSize: MainAxisSize.min,
+//                                 children: [
+//                                   IconButton(
+//                                     onPressed: () async {
+//                                       if (data[i].favourite == "false") {
+//                                         print("val = ${data[i].favourite}");
+//                                         print(data[i].id);
+//                                         print(data[i].idd);
+//
+//                                         await DBHelper.dbHelper
+//                                             .UpdateForFavriouteTable(
+//                                                 val: "true",
+//                                                 id: data[i].id,
+//                                                 idd: data[i].idd);
+//
+//                                         getAllQuotes = DBHelper.dbHelper
+//                                             .fetchAllSecondQuotes(
+//                                                 id: data[i].id);
+//                                         await DBHelper.dbHelper
+//                                             .insertQuoteFavrioteTable(
+//                                                 data: data[i]);
+//                                         setState(() {});
+//                                       } else {
+//                                         DBHelper.dbHelper
+//                                             .UpdateForFavriouteTable(
+//                                                 val: "false",
+//                                                 id: data[i].id,
+//                                                 idd: data[i].idd);
+//
+//                                         getAllQuotes = DBHelper.dbHelper
+//                                             .fetchAllSecondQuotes(
+//                                                 id: data[i].id);
+//                                         setState(() {});
+//                                       }
+//                                       //
+//                                       Get.toNamed('/favourite_page',
+//                                           arguments: data[i]);
+//
+//                                       favriouteController.addFavrioute(
+//                                           added: data[i]);
+// //
+//                                     },
+//                                     icon: Icon(
+//                                       CupertinoIcons.heart_fill,
+//                                       color: (data[i].favourite == "false")
+//                                           ? Colors.white
+//                                           : Colors.red,
+//                                     ),
+//                                   ),
+//                                   const Text(
+//                                     "Like",
+//                                     style: TextStyle(
+//                                       color: CupertinoColors.white,
+//                                     ),
+//                                   ),
+//                                   IconButton(
+//                                     onPressed: () {
+//                                       Get.toNamed('/edit_page',
+//                                           arguments: data[i]);
+//                                     },
+//                                     icon: const Icon(
+//                                       Icons.edit,
+//                                       color: CupertinoColors.white,
+//                                     ),
+//                                   ),
+//                                   const Text(
+//                                     "Edit",
+//                                     style: TextStyle(
+//                                       color: CupertinoColors.white,
+//                                     ),
+//                                   ),
+//                                   IconButton(
+//                                     onPressed: () {
+//                                       Clipboard.setData(
+//                                         ClipboardData(text: data[i].quote),
+//                                       ).then(
+//                                         (value) => Get.snackbar(
+//                                           "COPY QUOTE",
+//                                           "Successfully Copy",
+//                                         ),
+//                                       );
+//                                     },
+//                                     icon: const Icon(
+//                                       CupertinoIcons.doc_on_clipboard,
+//                                       color: CupertinoColors.white,
+//                                     ),
+//                                   ),
+//                                   const Text(
+//                                     "Copy",
+//                                     style:
+//                                         TextStyle(color: CupertinoColors.white),
+//                                   ),
+//                                   IconButton(
+//                                     onPressed: () async {
+//                                       await Share.share(data[i].quote);
+//                                     },
+//                                     icon: const Icon(
+//                                       CupertinoIcons.share,
+//                                       color: CupertinoColors.white,
+//                                     ),
+//                                   ),
+//                                   const Text(
+//                                     "Share",
+//                                     style: TextStyle(
+//                                       color: CupertinoColors.white,
+//                                     ),
+//                                   ),
+//                                 ],
+//                               ),
+
+                        ],
                       ),
                     ),
                   );

@@ -17,8 +17,8 @@ class EditingModel {
   });
 }
 
-// wallpaper
 
+// wallpaper
 class ImageModel {
   String image;
   String user;

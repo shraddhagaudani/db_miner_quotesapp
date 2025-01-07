@@ -119,14 +119,15 @@ class Quote {
       {required this.id,
       required this.quote,
       required this.author,
-      required this.favourite,required this.idd});
+      required this.favourite,
+      required this.idd});
 
   factory Quote.fromMap({required Map<String, dynamic> data}) => Quote(
       id: data["id"],
       quote: data["quote"],
       author: data["author"],
-      favourite: data['favourite'],idd: data['idd']);
-
+      favourite: data['favourite'],
+      idd: data['idd']);
 }
 
 class DatabaseFirst_Model {
@@ -153,22 +154,20 @@ class DatabaseSecond_Model {
   String favourite;
   int idd;
 
-  DatabaseSecond_Model({
-    required this.id,
-    required this.quote,
-    required this.authorName,
-    required this.favourite,
-    required this.idd
-  });
+  DatabaseSecond_Model(
+      {required this.id,
+      required this.quote,
+      required this.authorName,
+      required this.favourite,
+      required this.idd});
 
   factory DatabaseSecond_Model.fromMap({required Map data}) {
     return DatabaseSecond_Model(
-      id: data['id'],
-      quote: data['quote'],
-      authorName: data['author'],
+        id: data['id'],
+        quote: data['quote'],
+        authorName: data['author'],
         favourite: data['favourite'],
-      idd: data['idd']
-    );
+        idd: data['idd']);
   }
 }
 
