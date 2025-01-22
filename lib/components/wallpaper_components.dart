@@ -1,7 +1,6 @@
 import 'package:db_miner_quotesapp/utills/helper/db_helper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../models/app_model.dart';
 import 'package:get/get.dart';
 import 'package:async_wallpaper/async_wallpaper.dart';
